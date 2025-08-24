@@ -9,6 +9,7 @@ const (
 	Bike    VehicleType = "Bike"
 	Bicycle VehicleType = "Bicycle"
 	Van     VehicleType = "Van"
+	Unknown VehicleType = "Unknown"
 )
 
 type Vehicle struct {

@@ -9,7 +9,7 @@ import (
 
 func FindTicket(ticketId string) (string, string, storage.VehicleType, time.Time, error) {
 	for _, ticket := range storage.Tickets {
-		if ticket.TicketID == ticketId {
+		if ticket.TicketID == ticketId && !ticket.PaymentStatus {
 			return ticket.FloorID, ticket.SpotID, ticket.VehicleType, ticket.EntryTime, nil
 		}
 	}

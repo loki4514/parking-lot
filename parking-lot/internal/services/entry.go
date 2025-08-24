@@ -26,7 +26,8 @@ func CreateEntryTicket(vehicle storage.VehicleType, parkingLot *storage.ParkingL
 		if parkingLot.Floors[fi].FloorId == floorId {
 			for si := range parkingLot.Floors[fi].Spots {
 				if parkingLot.Floors[fi].Spots[si].SpotId == spotId {
-					parkingLot.Floors[fi].Spots[si].Availability = false
+					spot := &parkingLot.Floors[fi].Spots[si]
+					spot.Availability = false
 					break
 				}
 			}
